@@ -1,0 +1,18 @@
+{
+  "contextual_parameters": {
+    "business": "RETAIL",
+    "businessGroup": "VENDOR_MANAGED_INVENTORY",
+    "RNIISourceName": "distributor_shipment_item"
+  },
+  "data": {
+    "contentType": "json",
+    "configData": {
+      "IsClassificationEnabled": "true",
+      "ClassificationBucketExclusionList": [
+        "REBNI_COUNTING_ERROR_OVERAGE",
+        "UNCATEGORIZED_OVERAGE"
+      ],
+      "ClassificationBucketAllowedList": []
+    }
+  }
+}

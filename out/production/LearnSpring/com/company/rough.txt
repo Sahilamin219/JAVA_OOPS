@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+class Shape{
+    int a;
+    String s=" sahil ";
+}
+class Test {
+    public static void main(String[] args){
+        ArrayList<Shape> list = new ArrayList<Shape>();
+        Shape A=new Shape();A.a=1;
+        Shape B=new Shape();B.a=2;
+        Shape C=new Shape();C.a=3;
+        Shape D=new Shape();D.a=4;
+        list.add(A);
+        list.add(B);
+        list.add(C);
+        list.add(D);
+        Iterator<Shape> it = list.iterator();
+        while (it.hasNext()){
+            Shape tmp = it.next();
+            if( tmp == B || tmp == C){
+                System.out.println( tmp.a + tmp.s);
+            }
+        }
+    }
+}
