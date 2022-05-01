@@ -1,7 +1,7 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
+
 class Shape{
     int a;
     double b;
@@ -35,8 +35,26 @@ class GFG1 {
             if( tmp == B || tmp == C){
                 if ( tmp == B )System.out.print( tmp.b );
                 else System.out.print( tmp.c );
-                System.out.println( " " + tmp.a + tmp.s);
+                System.out.println( " " + tmp.a + tmp.s + " so the class name is " + tmp.getClass().getName() ) ;
             }
         }
+        Map<String, Object > mp = new HashMap<>();
+        mp.put("first", A);
+        mp.put("second",B);
+        Iterator mpitr = mp.entrySet().iterator();
+        while( mpitr.hasNext() ){
+            Map.Entry mpobj = (Map.Entry)mpitr.next();
+            Object mpval = (Object) mpobj.getValue();
+            System.out.println( mpobj.getKey() + " : " + mpval );
+            if( A == mpobj.getValue() ){
+                System.out.println("map checking right !!");
+            }
+            else if( B == mp.get("second") ){
+                System.out.println("map checking directly also worked !!!");
+            }
+        }
+        Shape shape = new Shape();
+        Optional<Shape> optionalShape = Optional.ofNullable((Shape) shape );
+        System.out.println("OPTIONAL IS : " + optionalShape);
     }
 }
